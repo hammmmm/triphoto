@@ -1,4 +1,30 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+.side {
+  // height: calc(100vh - 100px);
+  // width: 20%;
+  // float: left;
+  // background-color: lightskyblue;
+  .index-search {
+    height: 20%;
+    background-color: lightgreen;
+  }
+  .category-items {
+    height: 80%;
+    .category-item {
+      display: block;
+      text-align: center;
+      height: 25%;
+      font-size: 30px;
+    }
+  }
+}
+
+.main {
+  // height: calc(100vh - 100px);
+  // width: 80%;
+  // float: right;
+  // background-color: lightgoldenrodyellow;
+  .main__contents {
+    background-color: white;
+    margin: 20px;
+  }
 }
