@@ -3,11 +3,22 @@
   // width: 20%;
   // float: left;
   // background-color: lightskyblue;
-  .index-search {
+  .search {
     height: 20%;
     background-color: lightgreen;
+    .search-items {
+      .search-index {
+        display: block;
+        height: 25%;
+        float: left;
+      }
+      .search-btn {
+        display: block;
+        float: right;
+      }
+    }
   }
-  .category-items {
+  .categories {
     height: 80%;
     .category-item {
       display: block;
@@ -23,7 +34,7 @@
   // width: 80%;
   // float: right;
   // background-color: lightgoldenrodyellow;
-  .main__contents {
+  &__contents {
     background-color: white;
     margin: 20px;
   }

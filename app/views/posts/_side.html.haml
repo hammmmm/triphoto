@@ -1,6 +1,10 @@
 .side
-  %form.index-search
-  .category-items
+  .search
+    .search__items
+      %input.search-index{placeholder: "search country", type: "text"}/
+      = link_to "#", class:"search-btn" do
+        = icon("fas", "search", class: "icon")
+  .categories
     = link_to "#", class: "category-item" do
       ALL
     = link_to "#", class: "category-item" do
