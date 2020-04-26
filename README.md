@@ -7,14 +7,12 @@
 |email|string|null: false, unique: true|
 ### Association
 - has_many :comments
-- has_many :images
+- has_many :posts
 
-## imagesテーブル
+## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|string|null: false|
-|country|string|null: false|
-|category|string|null: false|
+|post|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |country_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
@@ -29,21 +27,21 @@
 |------|----|-------|
 |comment|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|image_id|integer|null: false, foreign_key: true|
+|post_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :image
+- belongs_to :post
 
 ## countriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |country|integer|null: false|
 ### Association
-- has_many :images
+- has_many :posts
 
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |category|integer|null: false|
 ### Association
-- has_many :images
+- has_many :posts

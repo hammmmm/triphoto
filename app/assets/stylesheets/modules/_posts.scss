@@ -1,8 +1,4 @@
 .side {
-  // height: calc(100vh - 100px);
-  // width: 20%;
-  // float: left;
-  // background-color: lightskyblue;
   .search {
     height: 20%;
     background-color: lightgreen;
@@ -30,12 +26,16 @@
 }
 
 .main {
-  // height: calc(100vh - 100px);
-  // width: 80%;
-  // float: right;
-  // background-color: lightgoldenrodyellow;
   &__contents {
-    background-color: white;
-    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    margin-left: 10px;
+    &__item {
+      background-color: white;
+      margin-right: 10px;
+      width: 33%;
+      height: 300px;
+    }
   }
 }

@@ -1,3 +1,5 @@
 .main
   .main__contents
-    aaa
+    - @posts.each do |post|
+      .main__contents__item
+        = post.post
