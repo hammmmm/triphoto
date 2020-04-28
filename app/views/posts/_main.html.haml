@@ -2,4 +2,4 @@
   .main__contents
     - @posts.each do |post|
       .main__contents__item
-        = post.post
+        = image_tag post.image_url, class: "item"

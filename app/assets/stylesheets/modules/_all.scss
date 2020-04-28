@@ -6,6 +6,11 @@
 
 .wrapper {
   height: 100vh;
+  width: 100%;
+}
+
+h3 {
+  font-size: 30px;
 }
 
 .header {
@@ -14,7 +19,7 @@
   background-color: pink;
   .header-left {
     height: 100%;
-    width: 20%;
+    width: 15%;
     background-color: lightskyblue;
     float: left;
     .header-logo {
@@ -30,19 +35,30 @@
     .link-btn {
       margin-right: 20px;
       margin-top: 15px;
+      display: flex;
+      &__left {
+        margin-right: 5px;
+      }
       .btn {
         display: block;
         text-align: center;
         line-height: 30px;
         font-size: 20px;
         height: 30px;
-        width: 150px;
+        width: 120px;
         border-radius: 50px;
       }
-      .link-btn__mypage {
+      #link-btn__login {
+        background-color: lightgreen;
+      }
+      #link-btn__logout {
+        margin-top: 5px;
+        background-color: lightsalmon;
+      }
+      #link-btn__mypage {
         background-color: lightskyblue;
       }
-      .link-btn__upload {
+      #link-btn__upload {
         margin-top: 5px;
         background-color: lightslategray;
       }
@@ -52,14 +68,15 @@
 
 .side {
   height: calc(100vh - 100px);
-  width: 20%;
+  width: 15%;
   float: left;
   background-color: lightskyblue;
 }
 
 .main {
+  overflow: scroll;
   height: calc(100vh - 100px);
-  width: 80%;
+  width: 85%;
   float: right;
   background-color: lightgoldenrodyellow;
 }

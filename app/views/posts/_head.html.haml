@@ -1,11 +1,18 @@
 .header
   .header-left
-    = link_to "#", class: "header-logo" do
+    = link_to root_path, class: "header-logo" do
       Triphoto
   .header-right
     .link-btn
-      = link_to "#", class: "btn link-btn__mypage" do
-        MYPAGE
-      = link_to "#", class: "btn link-btn__upload" do
-        UPLOAD
+      .link-btn__left
+        = link_to "#", class: "btn", id: "link-btn__login" do
+          LOGIN
+        = link_to "#", class: "btn", id: "link-btn__logout" do
+          LOGOUT
+      .link-btn__right
+        = link_to "#", class: "btn", id: "link-btn__mypage" do
+          MYPAGE
+        = link_to new_post_path, class: "btn", id: "link-btn__upload" do
+          UPLOAD
+
 
