@@ -16,7 +16,7 @@ h3 {
 .header {
   height: 100px;
   width: 100%;
-  background-color: pink;
+  background-color: lightpink;
   .header-left {
     height: 100%;
     width: 15%;
@@ -60,7 +60,7 @@ h3 {
       }
       #link-btn__upload {
         margin-top: 5px;
-        background-color: lightslategray;
+        background-color: lightslategrey;
       }
     }
   }
@@ -78,5 +78,5 @@ h3 {
   height: calc(100vh - 100px);
   width: 85%;
   float: right;
-  background-color: lightgoldenrodyellow;
+  background-color: lightyellow;
 }

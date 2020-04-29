@@ -11,11 +11,25 @@ class PostsController < ApplicationController
   
   def create
     Post.create(post_params)
-    if params[:image] != nil
-      img = MiniMagick::Image.read(params[:image])
-      img.resize_to_fill "128x128"
-    end
     redirect_to posts_path
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to root_path
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+    @categories = Category.all
+    @countries = Country.all
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+    redirect_to root_path
   end
 
   private

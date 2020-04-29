@@ -2,4 +2,10 @@
   .main__contents
     - @posts.each do |post|
       .main__contents__item
-        = image_tag post.image_url, class: "item"
+        = image_tag post.image_url, class: "image"
+        .list
+          %ul
+            = link_to "edit", edit_post_path(post.id), method: :get, class: "li li__edit"
+            = link_to "delete", post_path(post.id), method: :delete, class: "li li__delete", data:{confirm: "delete?"}
+
+
