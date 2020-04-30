@@ -5,11 +5,11 @@
       = link_to "#", class:"search-btn" do
         = icon("fas", "search", class: "icon")
   .categories
-    = link_to "#", class: "category-item" do
+    = link_to root_path, class: "category-item" do
       &emsp;All >
-    = link_to "#", class: "category-item" do
+    = link_to category_path(id: 1), class: "category-item" do
       &emsp;Landscape >
-    = link_to "#", class: "category-item" do
+    = link_to category_path(id: 2), class: "category-item" do
       &emsp;Food >
-    = link_to "#", class: "category-item" do
+    = link_to category_path(id: 3), class: "category-item" do
       &emsp;People >

@@ -17,9 +17,9 @@ h3 {
   height: 100px;
   width: 100%;
   background-color: lightpink;
-  position: fixed;
-  top: 0;
-  z-index: 10;
+  // position: fixed;
+  // top: 0;
+  // z-index: 10;
   .header-left {
     height: 100%;
     width: 15%;
@@ -83,7 +83,7 @@ h3 {
 }
 
 .side {
-  margin-top: 100px;
+  // margin-top: 100px;
   height: calc(100vh - 100px);
   width: 15%;
   float: left;
@@ -91,7 +91,7 @@ h3 {
 }
 
 .main {
-  margin-top: 100px;
+  // margin-top: 100px;
   overflow: scroll;
   height: calc(100vh - 100px);
   width: 85%;

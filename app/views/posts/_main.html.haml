@@ -4,9 +4,7 @@
       - @posts.each do |post|
         = image_tag post.image_url, class: "image"
         .list
-          %ul
-            - if user_signed_in? && current_user.id == post.user_id
-              = link_to "edit", edit_post_path(post.id), method: :get, class: "li li__edit"
-              = link_to "delete", post_path(post.id), method: :delete, class: "li li__delete", data:{confirm: "delete?"}
-
+          - if user_signed_in? && current_user.id == post.user_id
+            = link_to "edit", edit_post_path(post.id), method: :get, class: "li li__edit"
+            = link_to "delete", post_path(post.id), method: :delete, class: "li li__delete", data:{confirm: "delete?"}
 
