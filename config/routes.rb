@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   root to: 'posts#index'
   resources :posts, except: :show
   resources :users, only: :show
-  resources :likes, only: [:create, :destroy]
 end

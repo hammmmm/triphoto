@@ -1,8 +1,0 @@
-- if Like.find_by(user_id: current_user.id, post_id: post.id)
-  = link_to likes_path, method: :delete do
-    = icon('far', 'heart'), id: "like"
-- else
-  = link_to likes_path, method: :post do
-    = icon('fas', 'heart'), id: "unlike"
-= post.likes.length
-
