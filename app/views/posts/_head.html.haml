@@ -3,16 +3,25 @@
     = link_to root_path, class: "header-logo" do
       Triphoto
   .header-right
-    .link-btn
-      .link-btn__left
-        = link_to "#", class: "btn", id: "link-btn__login" do
-          LOGIN
-        = link_to "#", class: "btn", id: "link-btn__logout" do
-          LOGOUT
-      .link-btn__right
-        = link_to "#", class: "btn", id: "link-btn__mypage" do
-          MYPAGE
-        = link_to new_post_path, class: "btn", id: "link-btn__upload" do
-          UPLOAD
+    - if user_signed_in?
+      .link-btn
+        .link-btn__left
+          = link_to  user_path(current_user.id) , class: "btn", id: "link-btn__mypage" do
+            Mypage
+          = link_to new_post_path, class: "btn", id: "link-btn__upload" do
+            Upload
+        .link-btn__right
+          #name
+            = current_user.name
+          = link_to destroy_user_session_path, method: :delete, class: "btn", id: "link-btn__logout" do
+            Logout
+    - else
+      .link-btn
+        .link-btn__right
+          = link_to new_user_session_path, class: "btn", id: "link-btn__login" do
+            Login
+          = link_to new_user_registration_path, class: "btn", id: "link-btn__newuser" do
+            Signup
+
 
 

@@ -17,6 +17,9 @@ h3 {
   height: 100px;
   width: 100%;
   background-color: lightpink;
+  position: fixed;
+  top: 0;
+  z-index: 10;
   .header-left {
     height: 100%;
     width: 15%;
@@ -48,6 +51,15 @@ h3 {
         width: 120px;
         border-radius: 50px;
       }
+      #name {
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        height: 30px;
+        width: 120px;
+        border-radius: 50px;
+        background-color: palevioletred;
+      }
       #link-btn__login {
         background-color: lightgreen;
       }
@@ -62,11 +74,16 @@ h3 {
         margin-top: 5px;
         background-color: lightslategrey;
       }
+      #link-btn__newuser {
+        margin-top: 5px;
+        background-color: lightyellow;
+      }
     }
   }
 }
 
 .side {
+  margin-top: 100px;
   height: calc(100vh - 100px);
   width: 15%;
   float: left;
@@ -74,6 +91,7 @@ h3 {
 }
 
 .main {
+  margin-top: 100px;
   overflow: scroll;
   height: calc(100vh - 100px);
   width: 85%;

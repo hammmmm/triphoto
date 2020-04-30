@@ -28,11 +28,12 @@
 .main {
   &__contents {
     display: flex;
-    margin: 20px;
+    margin: 25px;
     &__item {
       position: relative;
-      .image{
+      .image {
         border: 2px solid white;
+        float: left;
       }
       .list {
         position: absolute;
