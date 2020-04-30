@@ -3,6 +3,14 @@
     .main__contents__item
       - @posts.each do |post|
         = image_tag post.image_url, class: "image"
+        .like-btn{ id: post.id }
+          - if Like.find_by(user_id: current_user.id, post_id: post.id)
+            = link_to likes_path, id: "like", method: :delete do
+              %i.far.fa-heart
+          - else
+            = link_to likes_path, id: "unlike", method: :post do
+              %i.fas.fa-heart
+          = post.likes.length
         .list
           %ul
             - if user_signed_in? && current_user.id == post.user_id
