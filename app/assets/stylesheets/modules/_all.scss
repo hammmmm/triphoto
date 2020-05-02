@@ -13,13 +13,16 @@ h3 {
   font-size: 30px;
 }
 
+h4 {
+  font-weight: bold;
+}
+
 .header {
   height: 100px;
   width: 100%;
   background-color: lightpink;
-  // position: fixed;
-  // top: 0;
-  // z-index: 10;
+  position: fixed;
+  top: 0;
   .header-left {
     height: 100%;
     width: 15%;
@@ -83,18 +86,23 @@ h3 {
 }
 
 .side {
-  // margin-top: 100px;
   height: calc(100vh - 100px);
   width: 15%;
   float: left;
   background-color: lightskyblue;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
 }
 
 .main {
-  // margin-top: 100px;
   overflow: scroll;
+  margin-top: 100px;
   height: calc(100vh - 100px);
   width: 85%;
   float: right;
   background-color: lightyellow;
+  position: fixed;
+  right: 0;
+
 }
