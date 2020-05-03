@@ -2,15 +2,16 @@
   .search {
     height: 20%;
     background-color: lightskyblue;
-    .search-items {
+    &__items {
+      margin-left: 10px;
+      padding-top: 30px;
       .search-index {
-        display: block;
-        height: 25%;
-        float: left;
+        width: 80%;
+        height: 30px;
       }
       .search-btn {
-        display: block;
-        float: right;
+        height: 30px;
+        background-color: palevioletred;
       }
     }
   }

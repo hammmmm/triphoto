@@ -34,6 +34,10 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @posts = Post.joins(:country).where('country LIKE ?', "#{params[:country]}")
+  end
+
   private
   def post_params
     params.require(:post).permit(:image, :category_id, :country_id).merge(user_id: current_user.id)

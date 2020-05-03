@@ -1,9 +1,10 @@
 .side
   .search
     .search__items
-      %input.search-index{placeholder: "search country", type: "text"}/
-      = link_to "#", class:"search-btn" do
-        = icon("fas", "search", class: "icon")
+      = form_with(url: search_posts_path, local: true, method: :get) do |f|
+        = f.text_field :country, placeholder: "search country", class: "search-index"
+        %button{type: "submit", class: "search-btn"}
+          %i.fas.fa-search
   .categories
     = link_to root_path, class: "category-item" do
       &emsp;All >
