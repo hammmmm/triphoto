@@ -35,7 +35,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.joins(:country).where('country LIKE ?', "#{params[:country]}")
+    @posts = Post.joins(:country).where('country LIKE ?', "%#{params[:country]}%")
   end
 
   private

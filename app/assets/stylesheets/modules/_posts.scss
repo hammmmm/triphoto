@@ -35,13 +35,14 @@
 
 .main {
   &__contents {
-    display: flex;
     margin: 25px;
     &__item {
+      float: left;
       position: relative;
+      border: 3px solid white;
+      height: 280px;
+      width: 280px;
       .image {
-        border: 2px solid white;
-        float: left;
       }
       .list {
         position: absolute;
@@ -49,7 +50,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        a {
+        .li {
           display: block;
           background-color: white;
           width: 30%;

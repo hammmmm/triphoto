@@ -1,7 +1,7 @@
 .main
   .main__contents
-    .main__contents__item
-      - @posts.each do |post|
+    - @posts.each do |post|
+      .main__contents__item
         = image_tag post.image_url, class: "image"
         .list
           - if user_signed_in? && current_user.id == post.user_id
