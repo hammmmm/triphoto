@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index,:search]
 
   def index
     @posts = Post.includes(:user, :category, :country).order("created_at DESC")
