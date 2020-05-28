@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_30_072619) do
+ActiveRecord::Schema.define(version: 2020_04_27_021348) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "category", null: false
@@ -30,25 +30,31 @@ ActiveRecord::Schema.define(version: 2020_04_30_072619) do
 
   create_table "countries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "country", null: false
+    t.string "flag", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "flag"
   end
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "post_id"
+    t.binst "user_id"
+    t.binst "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_likes_on_user_id"
+    t.index ["post_id"], name: "index_likes_on_post_id"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
+    t.binst "user_id"
+    t.binst "country_id"
+    t.binst "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "category_id"
-    t.integer "country_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
+    t.index ["country_id"], name: "index_post_on_country_id"
+    t.index ["categoryid"], name: "index_posts_on_category_id"
+
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -60,11 +66,13 @@ ActiveRecord::Schema.define(version: 2020_04_30_072619) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["name"], name: "index_users_on_name", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
+  add_foreign_key "likes", "users"
+  add_foreign_key "likes", "posts"
+  add_foreign_key "posts", "users"
+  add_foreign_key "posts", "countries"
+  add_foreign_key "posts", "categories"
 end
