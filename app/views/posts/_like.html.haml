@@ -1,0 +1,13 @@
+.like
+  - if user_signed_in?
+    - if post.liked_by?(current_user)
+      = link_to post_likes_path(post.id), method: :delete, remote: true do
+        = icon('fas', 'heart', class: 'unlike-btn')
+        = post.likes.count
+    - else
+      = link_to post_likes_path(post.id), method: :post, remote: true do
+        = icon('fas', 'heart', class: 'like-btn')
+        = post.likes.count
+  - else
+    = icon('fas', 'heart', class: 'like-btn')
+    = post.likes.count
