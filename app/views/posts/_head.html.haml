@@ -6,13 +6,13 @@
     - if user_signed_in?
       .link-btn
         .link-btn__left
-          = link_to  user_path(current_user.id) , class: "btn", id: "link-btn__mypage" do
+          = link_to  users_path, class: "btn", id: "link-btn__mypage" do
             Mypage
           = link_to new_post_path, class: "btn", id: "link-btn__upload" do
             Upload
         .link-btn__right
-          #name
-            = current_user.name
+          = link_to user_path(current_user.id), class: "btn", id: "link-btn__like" do
+            Likes
           = link_to destroy_user_session_path, method: :delete, class: "btn", id: "link-btn__logout" do
             Sign out
     - else

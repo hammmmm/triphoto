@@ -1,0 +1,7 @@
+= render "posts/main"
+.side
+  %h4
+    %br &ensp;I visited
+  .visited-countries
+    -  @posts.each do |post|
+      -# = image_tag post.country.flag, class:"flag"

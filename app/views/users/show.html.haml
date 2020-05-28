@@ -1,7 +1,11 @@
-= render "posts/main"
-.side
-  %h4
-    %br &ensp;I visited
-  .visited-countries
-    -  @posts.each do |post|
-      = image_tag post.country.flag, class:"flag"
+= render "posts/side"
+.main
+  .pagenation
+    = paginate(@posts)
+  .main__contents
+    - @like_posts.each do |post|
+      .main__contents__item
+        = image_tag post.image_url, class: "image"
+        .like
+          = icon('fas', 'heart', class: 'unlike-btn')
+          = post.likes.count
