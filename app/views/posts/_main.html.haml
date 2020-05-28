@@ -1,4 +1,6 @@
 .main
+  .pagenation
+    = paginate(@posts)
   .main__contents
     - @posts.each do |post|
       .main__contents__item
