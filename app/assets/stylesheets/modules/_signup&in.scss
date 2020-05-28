@@ -1,0 +1,30 @@
+.sign-form {
+  text-align: center;
+  width: 100%;
+  .sign {
+    margin-top: 120px;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  form {
+    border: 1px solid lightslategrey;
+    margin: 0 500px;
+    .field {
+      margin-top: 30px;
+      font-size: 20px;
+      .text_field {
+        height: 20px;
+      }
+    }
+    .actions {
+      margin: 30px 0;
+      .btn {
+        background-color: lightblue;
+        border: lightslategrey 1px solid;
+        height: 30px;
+        width: 100px;
+      }
+    }
+  }  
+}

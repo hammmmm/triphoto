@@ -14,14 +14,14 @@
           #name
             = current_user.name
           = link_to destroy_user_session_path, method: :delete, class: "btn", id: "link-btn__logout" do
-            Logout
+            Sign out
     - else
       .link-btn
         .link-btn__right
           = link_to new_user_session_path, class: "btn", id: "link-btn__login" do
-            Login
+            Sign in
           = link_to new_user_registration_path, class: "btn", id: "link-btn__newuser" do
-            Signup
+            Sign up
 
 
 
