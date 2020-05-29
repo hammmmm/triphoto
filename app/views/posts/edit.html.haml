@@ -3,13 +3,12 @@
   .main__upload
     = form_with model: @post, local: true do |f|
       %h3
-        Edit image/category/country
+        Edit this picture
       .post-image
         = f.label :image, class: "post-image__picture" do
           = image_tag @post.image_url, class: 'image'
-          = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
       .post-tag
         = f.collection_select(:category_id, @categories, :id, :category, {prompt: "select category"}, {class: "select"})
         = f.collection_select(:country_id, @countries, :id, :country, {prompt: "select country"}, {class: "select"})
-        = f.submit "UPDATE", class: "send-btn"
+        = f.submit "Update", class: "btn"

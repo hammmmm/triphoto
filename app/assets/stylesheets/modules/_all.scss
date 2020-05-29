@@ -2,6 +2,7 @@
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
+  color: black;
 }
 
 .wrapper {
@@ -18,29 +19,30 @@ h4 {
 }
 
 .header {
-  height: 100px;
+  height: 80px;
   width: 100%;
-  background-color: lightpink;
   position: fixed;
   top: 0;
+  background-color: #E5E5E5;
   .header-left {
     height: 100%;
     width: 15%;
-    background-color: lightskyblue;
+    background-color: #323232;
     float: left;
     .header-logo {
       display: block;
       font-size: 40px;
       font-weight: bold;
       text-align: center;
-      line-height: 100px;
+      line-height: 80px;
+      color: white;
     }
   }
   .header-right {
     float: right;
     .link-btn {
       margin-right: 20px;
-      margin-top: 15px;
+      margin-top: 8px;
       display: flex;
       &__left {
         margin-right: 5px;
@@ -51,39 +53,39 @@ h4 {
         line-height: 30px;
         font-size: 20px;
         height: 30px;
-        width: 120px;
-        border-radius: 50px;
+        width: 110px;
+        border-radius: 10px;
       }
       #link-btn__login {
-        background-color: lightgreen;
+        background-color: white;
       }
       #link-btn__like {
-        background-color: lightsalmon;
+        background-color: white;
       }
       #link-btn__mypage {
-        background-color: lightskyblue;
+        background-color: white;
       }
       #link-btn__upload {
         margin-top: 5px;
-        background-color: lightslategrey;
+        background-color: white;
       }
       #link-btn__logout {
         margin-top: 5px;
-        background-color: lightyellow;
+        background-color: white;
       }
       #link-btn__newuser {
         margin-top: 5px;
-        background-color: lightyellow;
+        background-color: white;
       }
     }
   }
 }
 
 .side {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   width: 15%;
   float: left;
-  background-color: lightskyblue;
+  background-color: #323232;
   position: fixed;
   bottom: 0;
   z-index: 10;
@@ -91,12 +93,10 @@ h4 {
 
 .main {
   overflow: scroll;
-  margin-top: 100px;
-  height: calc(100vh - 100px);
+  margin-top: 80px;
+  height: calc(100vh - 80px);
   width: 85%;
   float: right;
-  background-color: lightyellow;
   position: fixed;
   right: 0;
-
 }
