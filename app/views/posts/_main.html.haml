@@ -1,13 +1,13 @@
-.main
-  .pagenation
-    = paginate(@posts)
-  .main__contents
-    - @posts.each do |post|
-      .main__contents__item
-        = image_tag post.image_url, class: "image"
-        .list
-          - if user_signed_in? && current_user.id == post.user_id
-            = link_to "edit", edit_post_path(post.id), method: :get, class: "li li__edit"
-            = link_to "delete", post_path(post.id), method: :delete, class: "li li__delete", data:{confirm: "delete?"}
-        %div{id: "likes_#{post.id}"}
-          = render partial: "posts/like", locals: { post: post }
+-# .main
+-#   .pagenation
+-#     = paginate(@posts)
+-#   .main__contents
+-#     - @posts.each do |post|
+-#       .main__contents__item
+-#         = image_tag post.image_url, class: "image"
+-#         .list
+-#           - if user_signed_in? && current_user.id == post.user_id
+-#             = link_to "edit", edit_post_path(post.id), method: :get, class: "li li__edit"
+-#             = link_to "delete", post_path(post.id), method: :delete, class: "li li__delete", data:{confirm: "delete?"}
+-#         %div{id: "likes_#{post.id}"}
+-#           = render partial: "posts/like", locals: { post: post }
