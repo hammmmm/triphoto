@@ -71,6 +71,10 @@
           bottom: 0;
           left: 8px;
         }
+        .tag:hover {
+          color: white;
+          cursor: default;
+        }
         .li {
           display: block;
           background-color: white;
