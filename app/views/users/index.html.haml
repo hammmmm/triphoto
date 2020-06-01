@@ -1,3 +1,4 @@
+-# ユーザーマイページ
 = render "posts/main"
 .side
   %h4
@@ -5,3 +6,9 @@
   .visited-countries
     -  @posts.each do |post|
       -# = image_tag post.country.flag, class:"flag"
+      .tag
+        = link_to country_path(post.country_id) do 
+          = "# #{post.country.country}"
+  -# .map
+  -#   MAP >
+

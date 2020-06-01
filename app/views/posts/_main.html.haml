@@ -1,3 +1,4 @@
+-# メイン
 .main
   .pagenation
     = paginate(@posts)
@@ -7,7 +8,8 @@
         = image_tag post.image_url, class: "image"
         .list
           .tag
-            = "# #{post.country.country}"
+            = link_to country_path(post.country_id) do
+              = "# #{post.country.country}"
           - if user_signed_in? && current_user.id == post.user_id
             = link_to "edit", edit_post_path(post.id), method: :get, class: "li li__edit"
             = link_to "delete", post_path(post.id), method: :delete, class: "li li__delete", data:{confirm: "delete?"}

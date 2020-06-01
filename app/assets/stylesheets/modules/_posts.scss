@@ -1,4 +1,5 @@
 .side {
+  position: relative;
   .search {
     height: 20%;
     background-color: #323232;
@@ -38,6 +39,16 @@
       width: 60px;
       height: 40px;
     }
+    a {
+      color: white;
+    }
+  }
+  .map {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
   }
 }
 
@@ -70,10 +81,10 @@
           position: absolute;
           bottom: 0;
           left: 8px;
-        }
-        .tag:hover {
-          color: white;
-          cursor: default;
+          a:hover {
+            color: white;
+            cursor: default;
+          }
         }
         .li {
           display: block;

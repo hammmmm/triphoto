@@ -1,3 +1,4 @@
+-# ユーザーいいねページ
 = render "posts/side"
 .main
   .pagenation
@@ -6,6 +7,10 @@
     - @like_posts.each do |post|
       .main__contents__item
         = image_tag post.image_url, class: "image"
+        .list
+          .tag
+            = link_to country_path(post.country_id) do
+              = "# #{post.country.country}"
         .like
           = icon('fas', 'heart', class: 'unlike-btn')
           = post.likes.count
