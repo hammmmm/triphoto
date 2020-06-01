@@ -78,3 +78,5 @@ gem 'mini_magick'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'active_hash'
+gem 'fog-aws'
+gem "aws-sdk-s3", require: false
