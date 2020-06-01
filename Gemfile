@@ -80,3 +80,4 @@ gem 'kaminari'
 gem 'active_hash'
 gem 'fog-aws'
 gem "aws-sdk-s3", require: false
+gem 'rmagick'
